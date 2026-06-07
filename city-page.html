@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUYPROPERTZ in Bangalore</title>
+    <title>BUYPROPERTZ Cities</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/common-header-footer.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -68,7 +68,438 @@
         </nav>
     </aside>
     <main>
-        
+
+        <!-- City Hero Section -->
+        <section class="city_hero">
+            <div class="container">
+                <p class="city_hero_label">PROPERTIES</p>
+                <h1 class="city_hero_title">Ongoing Projects <span class="city_hero_city">in Bangalore</span></h1>
+                <p class="city_hero_desc">Discover RERA-approved under-construction apartments, villas, and plots across Bangalore's fastest-growing localities — from Whitefield and Sarjapur to Electronic City and Hebbal.</p>
+                <div class="city_hero_badges">
+                    <span class="city_badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        22 Projects
+                    </span>
+                    <span class="city_badge">Pre-launch offers available</span>
+                    <span class="city_badge city_badge--green">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        100% RERA Approved
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Property Listing Section -->
+        <section class="property_listing">
+            <div class="container">
+
+                <!-- City Filter + Select -->
+                <div class="pl_filter_bar">
+                    <div class="pl_filter_left">
+                        <p class="pl_filter_label">Filter by city</p>
+                        <div class="pl_city_tabs">
+                            <button class="pl_city_tab" data-city="all">
+                                <span class="pl_city_icon">
+                                    <img src="images/cities-CI1ECTYD.png" alt="All Cities icon" width="40" height="40" style="filter: sepia(1) saturate(1.8) brightness(1.05);">
+                                </span>
+                                <span class="pl_city_name">All Cities</span>
+                                <span class="pl_city_sub">Show all cities</span>
+                            </button>
+                            <button class="pl_city_tab active" data-city="bangalore">
+                                <span class="pl_city_icon">
+                                    <img src="images/bangalore-BjDycWzV.png" alt="Bangalore icon" width="40" height="40">
+                                </span>
+                                <span class="pl_city_name">Bangalore</span>
+                                <span class="pl_city_sub">Karnataka</span>
+                            </button>
+                            <button class="pl_city_tab" data-city="hyderabad">
+                                <span class="pl_city_icon">
+                                    <img src="images/hyderabad-charminar-XbmvqDbA.png" alt="Hyderabad icon" width="40" height="40">
+                                </span>
+                                <span class="pl_city_name">Hyderabad</span>
+                                <span class="pl_city_sub">Telangana</span>
+                            </button>
+                            <button class="pl_city_tab" data-city="chennai">
+                                <span class="pl_city_icon">
+                                    <img src="images/chennai-Dsqy31UK.png" alt="Chennai icon" width="40" height="40">
+                                </span>
+                                <span class="pl_city_name">Chennai</span>
+                                <span class="pl_city_sub">Tamil Nadu</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <div class="pl_filter_right">
+                        <span class="pl_select_label">Select one</span>
+                    </div> -->
+                </div>
+
+                <!-- Search + Filters bar -->
+                <div class="pl_search_wrap">
+                    <div class="pl_search_bar">
+                        <div class="pl_search_input_wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" class="pl_search_input" placeholder="Search by name or location...">
+                        </div>
+                        <button class="pl_filter_btn" id="plFilterToggle" aria-expanded="false" aria-controls="plFilterPanel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sliders-horizontal h-4 w-4"><line x1="21" x2="14" y1="4" y2="4"></line><line x1="10" x2="3" y1="4" y2="4"></line><line x1="21" x2="12" y1="12" y2="12"></line><line x1="8" x2="3" y1="12" y2="12"></line><line x1="21" x2="16" y1="20" y2="20"></line><line x1="12" x2="3" y1="20" y2="20"></line><line x1="14" x2="14" y1="2" y2="6"></line><line x1="8" x2="8" y1="10" y2="14"></line><line x1="16" x2="16" y1="18" y2="22"></line></svg>
+                            <span>Filters</span>
+                        </button>
+                    </div>
+
+                    <!-- Collapsible Filter Panel -->
+                    <div class="pl_filter_panel" id="plFilterPanel" aria-hidden="true">
+
+                        <!-- BHK Type -->
+                        <div class="pl_fp_group">
+                            <p class="pl_fp_label">BHK TYPE</p>
+                            <div class="pl_fp_chips">
+                                <button class="pl_chip active">All</button>
+                                <button class="pl_chip">Studio</button>
+                                <button class="pl_chip">1 BHK</button>
+                                <button class="pl_chip">2 BHK</button>
+                                <button class="pl_chip">3 BHK</button>
+                                <button class="pl_chip">4 BHK</button>
+                                <button class="pl_chip">5 BHK+</button>
+                            </div>
+                        </div>
+
+                        <!-- Property Type -->
+                        <div class="pl_fp_group">
+                            <p class="pl_fp_label">PROPERTY TYPE</p>
+                            <div class="pl_fp_chips">
+                                <button class="pl_chip active">All</button>
+                                <button class="pl_chip">Apartment</button>
+                                <button class="pl_chip">Villa</button>
+                                <button class="pl_chip">Plot</button>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="pl_fp_group">
+                            <p class="pl_fp_label">CITY</p>
+                            <div class="pl_fp_chips">
+                                <button class="pl_chip active">All Cities</button>
+                                <button class="pl_chip">Bangalore</button>
+                                <button class="pl_chip">Hyderabad</button>
+                                <button class="pl_chip">Chennai</button>
+                            </div>
+                        </div>
+
+                        <!-- Budget -->
+                        <div class="pl_fp_group">
+                            <p class="pl_fp_label">BUDGET</p>
+                            <div class="pl_fp_chips">
+                                <button class="pl_chip active">Any Price</button>
+                                <button class="pl_chip">Under ₹50L</button>
+                                <button class="pl_chip">₹50L–₹1Cr</button>
+                                <button class="pl_chip">₹1Cr–₹2Cr</button>
+                                <button class="pl_chip">₹2Cr–₹5Cr</button>
+                                <button class="pl_chip">Above ₹5Cr</button>
+                            </div>
+                        </div>
+
+                    </div><!-- /.pl_filter_panel -->
+                </div><!-- /.pl_search_wrap -->
+
+                <!-- Results count -->
+                <p class="pl_results_count"><strong>22</strong> properties found</p>
+
+                <!-- Property Cards Grid -->
+                <div class="pl_grid">
+
+                    <!-- Card 1 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/bangalore-city-3yKauG3u.jpg" alt="Birla Trimaya Phase 4" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Birla Trimaya Phase 4</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Shettygere Main Road, Before KIAL, Devanahalli, North Bangalore
+                            </p>
+                            <p class="pl_card_config">1BHK APARTMENT &nbsp;·&nbsp; 824 – 4000 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹90 Lakh – ₹4.3 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: Dec 2031
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/Main-Elevation-Bricks-and-Milestones-Solcrest.jpg" alt="Bricks & Milestones Solcrest" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Bricks & Milestones Solcrest</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Bileshivale Main Road, Rampura, off Hennur Road, Bengaluru
+                            </p>
+                            <p class="pl_card_config">2BHK APARTMENT &nbsp;·&nbsp; 1352 – 2026 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹1.35 – ₹2.29 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: Nov 2030 onwards
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/hyderabad-city-BBav4xah.jpg" alt="Century Attur" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Century Attur</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Attur Main Road, Attur Layout, Yelahanka New Town, Bangalore
+                            </p>
+                            <p class="pl_card_config">2BHK APARTMENT &nbsp;·&nbsp; 1160 SQ.FT – 1750 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹1.09 Cr – ₹1.75 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: June 2030
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/bangalore-city-3yKauG3u.jpg" alt="Birla Trimaya Phase 4" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Birla Trimaya Phase 4</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Shettygere Main Road, Before KIAL, Devanahalli, North Bangalore
+                            </p>
+                            <p class="pl_card_config">1BHK APARTMENT &nbsp;·&nbsp; 824 – 4000 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹90 Lakh – ₹4.3 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: Dec 2031
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/Main-Elevation-Bricks-and-Milestones-Solcrest.jpg" alt="Bricks & Milestones Solcrest" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Bricks & Milestones Solcrest</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Bileshivale Main Road, Rampura, off Hennur Road, Bengaluru
+                            </p>
+                            <p class="pl_card_config">2BHK APARTMENT &nbsp;·&nbsp; 1352 – 2026 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹1.35 – ₹2.29 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: Nov 2030 onwards
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/hyderabad-city-BBav4xah.jpg" alt="Century Attur" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Century Attur</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Attur Main Road, Attur Layout, Yelahanka New Town, Bangalore
+                            </p>
+                            <p class="pl_card_config">2BHK APARTMENT &nbsp;·&nbsp; 1160 SQ.FT – 1750 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹1.09 Cr – ₹1.75 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: June 2030
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/bangalore-city-3yKauG3u.jpg" alt="Birla Trimaya Phase 4" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Birla Trimaya Phase 4</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Shettygere Main Road, Before KIAL, Devanahalli, North Bangalore
+                            </p>
+                            <p class="pl_card_config">1BHK APARTMENT &nbsp;·&nbsp; 824 – 4000 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹90 Lakh – ₹4.3 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: Dec 2031
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 8 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/Main-Elevation-Bricks-and-Milestones-Solcrest.jpg" alt="Bricks & Milestones Solcrest" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Bricks & Milestones Solcrest</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Bileshivale Main Road, Rampura, off Hennur Road, Bengaluru
+                            </p>
+                            <p class="pl_card_config">2BHK APARTMENT &nbsp;·&nbsp; 1352 – 2026 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹1.35 – ₹2.29 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: Nov 2030 onwards
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 9 -->
+                    <article class="pl_card">
+                        <div class="pl_card_img_wrap">
+                            <img src="images/hyderabad-city-BBav4xah.jpg" alt="Century Attur" class="pl_card_img" loading="lazy">
+                            <span class="pl_badge pl_badge--featured">FEATURED</span>
+                            <span class="pl_badge pl_badge--type pl_badge--right">Apartment</span>
+                        </div>
+                        <div class="pl_card_body">
+                            <h3 class="pl_card_title">Century Attur</h3>
+                            <p class="pl_card_location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Attur Main Road, Attur Layout, Yelahanka New Town, Bangalore
+                            </p>
+                            <p class="pl_card_config">2BHK APARTMENT &nbsp;·&nbsp; 1160 SQ.FT – 1750 SQ.FT</p>
+                            <div class="pl_card_price_row">
+                                <span class="pl_card_price_label">STARTING FROM</span>
+                                <span class="pl_card_price">₹1.09 Cr – ₹1.75 Cr</span>
+                            </div>
+                            <button class="pl_enquire_btn">Enquire Now</button>
+                            <div class="pl_card_footer">
+                                <span class="pl_rera_label">RERA APPROVED</span>
+                                <a href="#" class="pl_arrow_btn" aria-label="View property">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                            <p class="pl_card_possession">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Possession: June 2030
+                            </p>
+                        </div>
+                    </article>
+
+                </div><!-- /.pl_grid -->
+
+            </div><!-- /.container -->
+        </section>
+
     </main>
     <footer class="site_footer">
         <div class="footer_main">
@@ -198,5 +629,35 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <!-- Property Listing — Filter panel toggle -->
+    <script>
+        (function () {
+            var toggleBtn = document.getElementById('plFilterToggle');
+            var panel     = document.getElementById('plFilterPanel');
+            if (!toggleBtn || !panel) return;
+
+            var wrap = toggleBtn.closest('.pl_search_wrap');
+
+            toggleBtn.addEventListener('click', function () {
+                var isOpen = panel.classList.toggle('is-open');
+                toggleBtn.classList.toggle('is-active', isOpen);
+                toggleBtn.setAttribute('aria-expanded', String(isOpen));
+                panel.setAttribute('aria-hidden', String(!isOpen));
+                if (wrap) wrap.classList.toggle('is-open', isOpen);
+            });
+
+            /* Chip single-select within each group */
+            document.querySelectorAll('.pl_fp_chips').forEach(function (group) {
+                group.addEventListener('click', function (e) {
+                    var chip = e.target.closest('.pl_chip');
+                    if (!chip) return;
+                    group.querySelectorAll('.pl_chip').forEach(function (c) {
+                        c.classList.remove('active');
+                    });
+                    chip.classList.add('active');
+                });
+            });
+        }());
+    </script>
 </body>
 </html>
