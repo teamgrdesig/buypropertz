@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUYPROPERTZ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common-header-footer.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-wrap">
+                <a href="#">
+                    <img width="180" height="40" src="images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="rightNavbar">
+                <button class="wishlist" aria-label="Wishlist">
+                    <svg width="22" height="22"><use href="images/site-icons.svg#notification_icon"></use></svg>
+                    <span class="wishlist-badge">0</span>
+                </button>
+                <div class="login_Wrap">
+                    <button class="signin-btn" aria-label="Sign in">
+                        Sign in
+                        <svg width="16" height="16"><use href="images/site-icons.svg#user_icon"></use></svg>
+                    </button>
+                </div>
+                <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sideMenu">
+                    <svg width="24" height="14"><use href="images/site-icons.svg#menu_icon"></use></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side menu overlay -->
+    <div class="sidemenu_overlay" id="sideMenuOverlay" aria-hidden="true"></div>
+
+    <!-- Side menu drawer -->
+    <aside class="sidemenu" id="sideMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <!-- Drawer header -->
+        <div class="sidemenu_header">
+            <a href="#" class="sidemenu_logo">
+                <img src="images/logo.png" width="160" height="36" alt="BUYPROPERTZ">
+            </a>
+            <button class="sidemenu_close" id="sideMenuClose" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <!-- Nav links -->
+        <nav class="sidemenu_nav" aria-label="Side navigation">
+            <ul class="sidemenu_links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Upcoming Projects</a></li>
+                <li><a href="#">Ongoing Projects</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section class="home_banner">
+            <div class="banner_title">
+                <div class="title_wrap">
+                    <h1 class="h1">Buy Homes Directly <br>With Builders</h1>
+                    <div class="hb_trust_badges">
+                        <span class="hb_badge">
+                            <!-- Handshake with dollar icon -->
+                            <img alt="" src="images/hand-shake.webp">
+                            No Brokerage
+                        </span>
+                        <span class="hb_badge_divider"></span>
+                        <span class="hb_badge">
+                            <!-- Best Deal stamp icon -->
+                            <img alt="" src="images/best-deal.webp">
+                            Bottom Rate Policy
+                        </span>
+                    </div>
+                </div>
+                <div class="hb_creative_image">
+                    <img width="800" height="350" src="images/home-banner.webp" alt="">
+                </div>
+            </div>
+            <div class="search_properties">
+                <div class="tab">
+                    <button class="tablinks" onclick="openProperty(event, 'Apartment')" id="defaultOpen">Apartment</button>
+                    <button class="tablinks" onclick="openProperty(event, 'Villa')">Villa</button>
+                </div>
+
+                <div id="Apartment" class="tabcontent">
+                    <div class="search_row">
+                        <div class="city_selector_wrap">
+                            <svg class="city_pin_icon" width="15" height="15"><use href="images/site-icons.svg#location_icon"></use></svg>
+                            <select class="city_selector" aria-label="Select city">
+                                <option value="bangalore">Bangalore</option>
+                                <option value="hyderabad">Hyderabad</option>
+                                <option value="chennai">Chennai</option>
+                            </select>
+                        </div>
+                        <div class="search_field">
+                            <input type="text" class="search_input" placeholder="Search for Project, locality or builder" aria-label="Search for Project, locality or builder">
+                            <button class="search_submit_btn" aria-label="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="popular_localities">
+                        <span class="pl_label">
+                            Popular Localities
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        </span>
+                        <div class="pl_chips">
+                            <button class="pl_chip active">Sarjapur</button>
+                            <button class="pl_chip">Whitefield</button>
+                            <button class="pl_chip">Devanahalli</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Villa" class="tabcontent">
+                    <div class="search_row">
+                        <div class="city_selector_wrap">
+                            <svg class="city_pin_icon" width="15" height="15"><use href="images/site-icons.svg#location_icon"></use></svg>
+                            <select class="city_selector" aria-label="Select city">
+                                <option value="bangalore">Bangalore</option>
+                                <option value="hyderabad">Hyderabad</option>
+                                <option value="chennai">Chennai</option>
+                            </select>
+                        </div>
+                        <div class="search_field">
+                            <input type="text" class="search_input" placeholder="Search for Project, locality or builder" aria-label="Search for Project, locality or builder">
+                            <button class="search_submit_btn" aria-label="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="popular_localities">
+                        <span class="pl_label">
+                            Popular Localities
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        </span>
+                        <div class="pl_chips">
+                            <button class="pl_chip active">Sarjapur</button>
+                            <button class="pl_chip">Whitefield</button>
+                            <button class="pl_chip">Devanahalli</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="exploreCTA">
+            <a href="#">
+                <button class="btnExp">Explore Properties<span aria-hidden="true">→</span></button>
+            </a>
+            <a href="#"><button class="btnTalk">Talk to a Property Expert</button></a>
+        </section>
+        <section class="exploreByCity">
+            <div class="container">
+                <div class="cityInfo_Wrapper">
+                    <h2 class="title">Real Estate Services in <span class="cities">Bangalore, Hyderabad, and Chennai</span></h2>
+                    <p class="desc">BUYPROPERTZ is a trusted real estate platform helping home buyers, investors, and tenants find verified RERA-approved properties in Bangalore, Hyderabad, and Chennai. Browse residential apartments, premium villas, and plotted developments across India's fastest-growing real estate markets. Each city listing is handpicked, legally verified, and backed by expert advisory — making your property search transparent and reliable.</p>
+                </div>
+                <div class="cityThumbGrid_Wrapper">
+                    <!-- Bangalore -->
+                    <div class="city_card">
+                        <img width="423" height="500" src="images/bangalore-city-3yKauG3u.jpg" alt="Bangalore skyline">
+                        <span class="project_count">120+ Projects</span>
+                        <div class="card_cont">
+                            <h3>Bangalore</h3>
+                            <p>India's leading IT hub and fastest-growing real estate market.</p>
+                            <a href="#" class="browse_link">Browse Projects<svg width="24" height="14"><use href="images/site-icons.svg#arrow_icon"></use></svg></a>
+                        </div>
+                    </div>
+                    <!-- Hyderabad -->
+                    <div class="city_card">
+                        <img width="423" height="500" src="images/hyderabad-city-BBav4xah.jpg" alt="Hyderabad - Buddha statue on lake">
+                        <span class="project_count">110+ Projects</span>
+                        <div class="card_cont">
+                            <h3>Hyderabad</h3>
+                            <p>Booming tech city with excellent investment potential.</p>
+                            <a href="#" class="browse_link">Browse Projects<svg width="24" height="14"><use href="images/site-icons.svg#arrow_icon"></use></svg></a>
+                        </div>
+                    </div>
+                    <!-- Chennai -->
+                    <div class="city_card">
+                        <img width="423" height="500" src="images/chennai-city-MUKEODCw.jpg" alt="Chennai landmark building">
+                        <span class="project_count">90+ Projects</span>
+                        <div class="card_cont">
+                            <h3>Chennai</h3>
+                            <p>Known for beachfront living and a strong industrial base.</p>
+                            <a href="#" class="browse_link">Browse Projects<svg width="24" height="14"><use href="images/site-icons.svg#arrow_icon"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featuredProperties">
+            <div class="container">
+                <!-- Section header -->
+                <div class="fp_header">
+                    <div class="fp_header_left">
+                        <!-- <span class="fp_eyebrow">Featured Residences</span> -->
+                        <h2 class="fp_title">RERA-approved properties,<br><span class="fp_title_accent">curated for you.</span></h2>
+                    </div>
+                    <a href="#" class="fp_view_all">View all properties →</a>
+                </div>
+
+                <!-- Property cards grid -->
+                <div class="fp_grid">
+
+                    <!-- Card 1 -->
+                    <div class="fp_card">
+                        <div class="fp_card_img">
+                            <img src="images/o2hpcusid1x8itjdrabv.webp" width="340" height="220" alt="Birla Trimaya Phase 4">
+                            <span class="badge_featured">FEATURED</span>
+                            <span class="badge_verified">
+                                <svg width="12" height="12"><use href="images/site-icons.svg#check_icon"></use></svg>
+                                Verified
+                            </span>
+                        </div>
+                        <div class="fp_card_body">
+                            <h3 class="fp_prop_name">Birla Trimaya Phase 4</h3>
+                            <p class="fp_location">
+                                <svg width="13" height="13"><use href="images/site-icons.svg#location_icon"></use></svg>
+                                Shettigere Main Road, Before KIAL, Devanahalli, North Bangalore, Bangalore
+                            </p>
+                            <p class="fp_type">1BHK APARTMENT</p>
+                            <p class="fp_price">₹90 Lakh – ₹4.3 Cr</p>
+                            <a href="#" class="fp_enquire_btn">Enquire Now</a>
+                            <div class="fp_card_footer">
+                                <span class="fp_rera">RERA APPROVED</span>
+                                <a href="#" class="fp_arrow_btn" aria-label="View property">
+                                    <svg width="20" height="20"><use href="images/site-icons.svg#arrow_icon"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="fp_card">
+                        <div class="fp_card_img">
+                            <img src="images/Main-Elevation-Bricks-and-Milestones-Solcrest.jpg" width="340" height="220" alt="Bricks & Milestones Solcrest">
+                            <span class="badge_featured">FEATURED</span>
+                            <span class="badge_verified">
+                                <svg width="12" height="12"><use href="images/site-icons.svg#check_icon"></use></svg>
+                                Verified
+                            </span>
+                        </div>
+                        <div class="fp_card_body">
+                            <h3 class="fp_prop_name">Bricks &amp; Milestones Solcrest</h3>
+                            <p class="fp_location">
+                                <svg width="13" height="13"><use href="images/site-icons.svg#location_icon"></use></svg>
+                                Bileshivale Main Road, Rampura, off Hennur Road, Bengaluru, Bangalore
+                            </p>
+                            <p class="fp_type">2BHK APARTMENT</p>
+                            <p class="fp_price">₹1.35 – ₹2.29 Cr</p>
+                            <a href="#" class="fp_enquire_btn">Enquire Now</a>
+                            <div class="fp_card_footer">
+                                <span class="fp_rera">RERA APPROVED</span>
+                                <a href="#" class="fp_arrow_btn" aria-label="View property">
+                                    <svg width="20" height="20"><use href="images/site-icons.svg#arrow_icon"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="fp_card">
+                        <div class="fp_card_img">
+                            <img src="images/wjotcotvi9e9iyox0kpw.webp" width="340" height="220" alt="Century Attur">
+                            <span class="badge_featured">FEATURED</span>
+                            <span class="badge_verified">
+                                <svg width="12" height="12"><use href="images/site-icons.svg#check_icon"></use></svg>
+                                Verified
+                            </span>
+                        </div>
+                        <div class="fp_card_body">
+                            <h3 class="fp_prop_name">Century Attur</h3>
+                            <p class="fp_location">
+                                <svg width="13" height="13"><use href="images/site-icons.svg#location_icon"></use></svg>
+                                Attur Main Road, Attur Layout, Yelahanka New Town, Bangalore, Bangalore
+                            </p>
+                            <p class="fp_type">2BHK APARTMENT</p>
+                            <p class="fp_price">₹1.09 Cr – ₹1.75 Cr</p>
+                            <a href="#" class="fp_enquire_btn">Enquire Now</a>
+                            <div class="fp_card_footer">
+                                <span class="fp_rera">RERA APPROVED</span>
+                                <a href="#" class="fp_arrow_btn" aria-label="View property">
+                                    <svg width="20" height="20"><use href="images/site-icons.svg#arrow_icon"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="fp_card">
+                        <div class="fp_card_img">
+                            <img src="images/o2hpcusid1x8itjdrabv.webp" width="340" height="220" alt="Birla Trimaya Phase 4">
+                            <span class="badge_featured">FEATURED</span>
+                            <span class="badge_verified">
+                                <svg width="12" height="12"><use href="images/site-icons.svg#check_icon"></use></svg>
+                                Verified
+                            </span>
+                        </div>
+                        <div class="fp_card_body">
+                            <h3 class="fp_prop_name">Birla Trimaya Phase 4</h3>
+                            <p class="fp_location">
+                                <svg width="13" height="13"><use href="images/site-icons.svg#location_icon"></use></svg>
+                                Shettigere Main Road, Before KIAL, Devanahalli, North Bangalore, Bangalore
+                            </p>
+                            <p class="fp_type">1BHK APARTMENT</p>
+                            <p class="fp_price">₹90 Lakh – ₹4.3 Cr</p>
+                            <a href="#" class="fp_enquire_btn">Enquire Now</a>
+                            <div class="fp_card_footer">
+                                <span class="fp_rera">RERA APPROVED</span>
+                                <a href="#" class="fp_arrow_btn" aria-label="View property">
+                                    <svg width="20" height="20"><use href="images/site-icons.svg#arrow_icon"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="fp_card">
+                        <div class="fp_card_img">
+                            <img src="images/Main-Elevation-Bricks-and-Milestones-Solcrest.jpg" width="340" height="220" alt="Bricks & Milestones Solcrest">
+                            <span class="badge_featured">FEATURED</span>
+                            <span class="badge_verified">
+                                <svg width="12" height="12"><use href="images/site-icons.svg#check_icon"></use></svg>
+                                Verified
+                            </span>
+                        </div>
+                        <div class="fp_card_body">
+                            <h3 class="fp_prop_name">Bricks &amp; Milestones Solcrest</h3>
+                            <p class="fp_location">
+                                <svg width="13" height="13"><use href="images/site-icons.svg#location_icon"></use></svg>
+                                Bileshivale Main Road, Rampura, off Hennur Road, Bengaluru, Bangalore
+                            </p>
+                            <p class="fp_type">2BHK APARTMENT</p>
+                            <p class="fp_price">₹1.35 – ₹2.29 Cr</p>
+                            <a href="#" class="fp_enquire_btn">Enquire Now</a>
+                            <div class="fp_card_footer">
+                                <span class="fp_rera">RERA APPROVED</span>
+                                <a href="#" class="fp_arrow_btn" aria-label="View property">
+                                    <svg width="20" height="20"><use href="images/site-icons.svg#arrow_icon"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="fp_card">
+                        <div class="fp_card_img">
+                            <img src="images/wjotcotvi9e9iyox0kpw.webp" width="340" height="220" alt="Century Attur">
+                            <span class="badge_featured">FEATURED</span>
+                            <span class="badge_verified">
+                                <svg width="12" height="12"><use href="images/site-icons.svg#check_icon"></use></svg>
+                                Verified
+                            </span>
+                        </div>
+                        <div class="fp_card_body">
+                            <h3 class="fp_prop_name">Century Attur</h3>
+                            <p class="fp_location">
+                                <svg width="13" height="13"><use href="images/site-icons.svg#location_icon"></use></svg>
+                                Attur Main Road, Attur Layout, Yelahanka New Town, Bangalore, Bangalore
+                            </p>
+                            <p class="fp_type">2BHK APARTMENT</p>
+                            <p class="fp_price">₹1.09 Cr – ₹1.75 Cr</p>
+                            <a href="#" class="fp_enquire_btn">Enquire Now</a>
+                            <div class="fp_card_footer">
+                                <span class="fp_rera">RERA APPROVED</span>
+                                <a href="#" class="fp_arrow_btn" aria-label="View property">
+                                    <svg width="20" height="20"><use href="images/site-icons.svg#arrow_icon"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trustedDevelopers">
+            <div class="container">
+                <div class="td_header">
+                    <!-- <span class="td_eyebrow">06 — Developer Network</span> -->
+                    <h2 class="td_title">Trusted Real <span class="td_accent">Estate</span> Developers</h2>
+                    <p class="td_desc">We collaborate exclusively with RERA-registered developers known for quality construction, on-time delivery, and transparent transactions. Our curated developer network spans Bangalore, Hyderabad, and Chennai, ensuring every property investment you make is backed by verified builder credibility and legal compliance.</p>
+                </div>
+            </div>
+            <!-- Full-width marquee strip -->
+            <div class="td_marquee_track" aria-label="Developer logos">
+                <div class="td_marquee_inner">
+                    <!-- Set 1 -->
+                    <a href="/developers/prestige-group" class="td_logo_card" aria-label="Prestige Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000873/realhubb/developers/qo31kp0e94rjd1rn6ozl.png" alt="Prestige Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/brigade-group" class="td_logo_card" aria-label="Brigade Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999444/realhubb/developers/jqr8llzavm3yckrupc23.png" alt="Brigade Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/godrej-properties" class="td_logo_card" aria-label="Godrej Properties"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000421/realhubb/developers/myjy6ouelc8fymb3nwia.png" alt="Godrej Properties" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sobha-limited" class="td_logo_card" aria-label="Sobha Limited"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001093/realhubb/developers/renntwpohjsrj3ovkjuv.jpg" alt="Sobha Limited" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/lodha-group" class="td_logo_card" aria-label="Lodha Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000685/realhubb/developers/ic4sl9p4wyxsrvd9mj6c.png" alt="Lodha Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/dsr-group" class="td_logo_card" aria-label="DSR Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000376/realhubb/developers/iireke5mdyxq9pohmu8i.png" alt="DSR Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/assetz-property-group" class="td_logo_card" aria-label="Assetz Property Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999091/realhubb/developers/qxuajbpvtxtmqow9e5x4.png" alt="Assetz Property Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/birla-estates" class="td_logo_card" aria-label="Birla Estates"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999382/realhubb/developers/poofh7x1jwsy869mwtl6.png" alt="Birla Estates" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/ckpc-properties" class="td_logo_card" aria-label="CKPC Properties"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999514/realhubb/developers/a7rcuqoe8opxlmmowlbd.jpg" alt="CKPC Properties" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sumedha-realty" class="td_logo_card" aria-label="Sumedha Realty"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001228/realhubb/developers/ldapvq1mpdvxywe6fd0j.jpg" alt="Sumedha Realty" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sumadhura-infracon" class="td_logo_card" aria-label="Sumadhura Infracon"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001208/realhubb/developers/i9aotzlxmcl8fmx1ewii.png" alt="Sumadhura Infracon" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/tata-housing" class="td_logo_card" aria-label="Tata Housing"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001264/realhubb/developers/d1dzrc7ak7fyjcmpnp6e.png" alt="Tata Housing" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/ramky-group" class="td_logo_card" aria-label="Ramky Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000985/realhubb/developers/cf1dcgzhgeydlzgekso0.png" alt="Ramky Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/bricks-and-milestone" class="td_logo_card" aria-label="Bricks and Milestone"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999412/realhubb/developers/sqyxmflzgi3fa26jie3c.png" alt="Bricks and Milestone" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/abhee-group" class="td_logo_card" aria-label="Abhee Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999003/realhubb/developers/qtf6nev7o5wzywu31yuv.png" alt="Abhee Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/nikko-homes" class="td_logo_card" aria-label="Nikko Homes"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000813/realhubb/developers/dgmtco21wlabr0qlla6b.png" alt="Nikko Homes" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/vajram-group" class="td_logo_card" aria-label="Vajram Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001349/realhubb/developers/jnwpjc2pi46dcupnne28.png" alt="Vajram Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/provident-housing" class="td_logo_card" aria-label="Provident Housing"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000911/realhubb/developers/lzbtggqhtkk75kh8h4w9.jpg" alt="Provident Housing" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sattva-group" class="td_logo_card" aria-label="Sattva Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001021/realhubb/developers/kuky4fh1gopnvoovxlzv.webp" alt="Sattva Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/kolte-patil-developers" class="td_logo_card" aria-label="Kolte Patil Developers"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000566/realhubb/developers/jo7kgymbmc5segc4rslo.jpg" alt="Kolte Patil Developers" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/kalyani-developers" class="td_logo_card" aria-label="Kalyani Developers"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000512/realhubb/developers/do5w7rvaxjlcrlhpjo7u.jpg" alt="Kalyani Developers" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/mjr-group" class="td_logo_card" aria-label="MJR Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000756/realhubb/developers/hq04ln5rkp7aehieuabv.png" alt="MJR Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/tvs-emerald" class="td_logo_card" aria-label="TVS Emerald"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001320/realhubb/developers/lqkinymnoakfzdxww018.png" alt="TVS Emerald" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/snn-estates" class="td_logo_card" aria-label="SNN Estates"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001055/realhubb/developers/khu84dkdcpwplnwvxmzg.png" alt="SNN Estates" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/goyal-co" class="td_logo_card" aria-label="Goyal &amp; Co."><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000443/realhubb/developers/rakeo4fes01saquj0p98.png" alt="Goyal &amp; Co." width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/karle-infra" class="td_logo_card" aria-label="Karle Infra"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000545/realhubb/developers/ewrqefrmkxvi0msj7fec.png" alt="Karle Infra" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/mana-group" class="td_logo_card" aria-label="Mana Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000731/realhubb/developers/w2p4u5kvz84wtrkwjsw6.png" alt="Mana Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/dnr-group" class="td_logo_card" aria-label="DNR Group"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999608/realhubb/developers/oweadh22jg6pp06jcc1z.png" alt="DNR Group" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/larsen-toubro-realty" class="td_logo_card" aria-label="Larsen &amp; Toubro Realty"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000668/realhubb/developers/n4mj1ryuxsjeuwmo0y3p.png" alt="Larsen &amp; Toubro Realty" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/century-real-estate" class="td_logo_card" aria-label="Century Real Estate"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999490/realhubb/developers/hnkruwo0x4gfjuoi2jfw.png" alt="Century Real Estate" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/puravankara-limited" class="td_logo_card" aria-label="Puravankara Limited"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000955/realhubb/developers/bfqevyngr4fpjxolgzob.png" alt="Puravankara Limited" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/nambiar-builders" class="td_logo_card" aria-label="Nambiar Builders"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000789/realhubb/developers/krkoqzfpic5a0soodrsb.png" alt="Nambiar Builders" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/total-environment" class="td_logo_card" aria-label="Total Environment"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001293/realhubb/developers/v97upckuocd14vsh6onu.png" alt="Total Environment" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/mahindra-lifespaces" class="td_logo_card" aria-label="Mahindra Lifespaces"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000700/realhubb/developers/ybzvql4qs7asz0dn7ryb.png" alt="Mahindra Lifespaces" width="160" height="64" loading="lazy"></a>
+                    <!-- Set 2 — seamless loop duplicate -->
+                    <a href="/developers/prestige-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000873/realhubb/developers/qo31kp0e94rjd1rn6ozl.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/brigade-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999444/realhubb/developers/jqr8llzavm3yckrupc23.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/godrej-properties" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000421/realhubb/developers/myjy6ouelc8fymb3nwia.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sobha-limited" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001093/realhubb/developers/renntwpohjsrj3ovkjuv.jpg" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/lodha-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000685/realhubb/developers/ic4sl9p4wyxsrvd9mj6c.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/dsr-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000376/realhubb/developers/iireke5mdyxq9pohmu8i.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/assetz-property-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999091/realhubb/developers/qxuajbpvtxtmqow9e5x4.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/birla-estates" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999382/realhubb/developers/poofh7x1jwsy869mwtl6.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/ckpc-properties" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999514/realhubb/developers/a7rcuqoe8opxlmmowlbd.jpg" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sumedha-realty" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001228/realhubb/developers/ldapvq1mpdvxywe6fd0j.jpg" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sumadhura-infracon" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001208/realhubb/developers/i9aotzlxmcl8fmx1ewii.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/tata-housing" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001264/realhubb/developers/d1dzrc7ak7fyjcmpnp6e.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/ramky-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000985/realhubb/developers/cf1dcgzhgeydlzgekso0.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/bricks-and-milestone" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999412/realhubb/developers/sqyxmflzgi3fa26jie3c.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/abhee-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999003/realhubb/developers/qtf6nev7o5wzywu31yuv.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/nikko-homes" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000813/realhubb/developers/dgmtco21wlabr0qlla6b.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/vajram-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001349/realhubb/developers/jnwpjc2pi46dcupnne28.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/provident-housing" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000911/realhubb/developers/lzbtggqhtkk75kh8h4w9.jpg" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/sattva-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001021/realhubb/developers/kuky4fh1gopnvoovxlzv.webp" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/kolte-patil-developers" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000566/realhubb/developers/jo7kgymbmc5segc4rslo.jpg" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/kalyani-developers" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000512/realhubb/developers/do5w7rvaxjlcrlhpjo7u.jpg" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/mjr-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000756/realhubb/developers/hq04ln5rkp7aehieuabv.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/tvs-emerald" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001320/realhubb/developers/lqkinymnoakfzdxww018.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/snn-estates" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001055/realhubb/developers/khu84dkdcpwplnwvxmzg.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/goyal-co" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000443/realhubb/developers/rakeo4fes01saquj0p98.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/karle-infra" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000545/realhubb/developers/ewrqefrmkxvi0msj7fec.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/mana-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000731/realhubb/developers/w2p4u5kvz84wtrkwjsw6.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/dnr-group" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999608/realhubb/developers/oweadh22jg6pp06jcc1z.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/larsen-toubro-realty" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000668/realhubb/developers/n4mj1ryuxsjeuwmo0y3p.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/century-real-estate" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1773999490/realhubb/developers/hnkruwo0x4gfjuoi2jfw.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/puravankara-limited" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000955/realhubb/developers/bfqevyngr4fpjxolgzob.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/nambiar-builders" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000789/realhubb/developers/krkoqzfpic5a0soodrsb.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/total-environment" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774001293/realhubb/developers/v97upckuocd14vsh6onu.png" alt="" width="160" height="64" loading="lazy"></a>
+                    <a href="/developers/mahindra-lifespaces" class="td_logo_card" aria-hidden="true" tabindex="-1"><img src="https://res.cloudinary.com/dr0fl3ak5/image/upload/f_auto,q_auto,w_200,h_120,c_fit/v1774000700/realhubb/developers/ybzvql4qs7asz0dn7ryb.png" alt="" width="160" height="64" loading="lazy"></a>
+                </div>
+            </div>
+        </section>
+        <section class="whyTrustUs">
+            <div class="container">
+                <div class="wtu_inner">
+
+                    <!-- Left column -->
+                    <div class="wtu_left">
+                        <span class="wtu_eyebrow">— Why BUYPROPERTZ</span>
+                        <h2 class="wtu_title">Built on trust.<br><span class="wtu_accent">Engineered for clarity.</span></h2>
+                        <p class="wtu_desc">BUYPROPERTZ simplifies the entire property buying process — combining verified listings, market intelligence, and personalized guidance so every decision is confident and well-informed.</p>
+                        <a href="#" class="wtu_cta">Speak to an Advisor</a>
+                    </div>
+
+                    <!-- Right column — feature grid -->
+                    <div class="wtu_grid">
+
+                        <div class="wtu_card">
+                            <span class="wtu_icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M3 21a9 9 0 0 1 18 0"/></svg>
+                            </span>
+                            <h3 class="wtu_card_title">17+ Years of Excellence</h3>
+                            <p class="wtu_card_desc">Decades of insight into India's fastest-growing markets.</p>
+                        </div>
+
+                        <div class="wtu_card">
+                            <span class="wtu_icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </span>
+                            <h3 class="wtu_card_title">3,000+ Happy Families</h3>
+                            <p class="wtu_card_desc">Thousands of homes delivered with care and clarity.</p>
+                        </div>
+
+                        <div class="wtu_card">
+                            <span class="wtu_icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </span>
+                            <h3 class="wtu_card_title">Trusted Partnerships</h3>
+                            <p class="wtu_card_desc">Exclusive access to top-tier RERA-approved developers.</p>
+                        </div>
+
+                        <div class="wtu_card">
+                            <span class="wtu_icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+                            </span>
+                            <h3 class="wtu_card_title">Zero Hidden Charges</h3>
+                            <p class="wtu_card_desc">Transparent pricing — no commissions from buyers.</p>
+                        </div>
+
+                        <div class="wtu_card">
+                            <span class="wtu_icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <h3 class="wtu_card_title">End-to-End Support</h3>
+                            <p class="wtu_card_desc">From discovery to registration and beyond.</p>
+                        </div>
+
+                        <div class="wtu_card">
+                            <span class="wtu_icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </span>
+                            <h3 class="wtu_card_title">Legal Expertise</h3>
+                            <p class="wtu_card_desc">In-house counsel ensures every transaction is secure.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site_footer">
+        <div class="footer_main">
+            <div class="container">
+                <div class="footer_grid">
+
+                    <!-- Col 1 — Brand -->
+                    <div class="footer_brand">
+                        <a href="#" class="footer_logo">
+                            <img src="images/logo.png" width="160" height="36" alt="BUYPROPERTZ">
+                        </a>
+                        <p class="footer_tagline">Your Trusted Real Estate Partner</p>
+                        <p class="footer_about">Leading channel partner in Bangalore's real estate market. We connect you with the best properties and developers, ensuring a smooth and transparent buying experience.</p>
+                        <div class="footer_stats">
+                            <div class="footer_stat">
+                                <strong>1000+</strong>
+                                <span>Properties Sold</span>
+                            </div>
+                            <div class="footer_stat">
+                                <strong>17+</strong>
+                                <span>Years Experience</span>
+                            </div>
+                            <div class="footer_stat">
+                                <strong>2000+</strong>
+                                <span>Happy Clients</span>
+                            </div>
+                        </div>
+                        <div class="footer_socials">
+                            <a href="#" aria-label="Facebook" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="YouTube" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Col 2 — Quick Links -->
+                    <div class="footer_col">
+                        <h4 class="footer_col_title">Quick Links</h4>
+                        <ul class="footer_links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Upcoming Projects</a></li>
+                            <li><a href="#">Ongoing Projects</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3 — Our Services -->
+                    <div class="footer_col">
+                        <h4 class="footer_col_title">Our Services</h4>
+                        <ul class="footer_links">
+                            <li><a href="#">Property Consultation</a></li>
+                            <li><a href="#">Site Visits</a></li>
+                            <li><a href="#">Documentation Support</a></li>
+                            <li><a href="#">Investment Advisory</a></li>
+                            <li><a href="#">After-Sales Service</a></li>
+                            <li><a href="#">Home Loan Assistance</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4 — Contact Us -->
+                    <div class="footer_col">
+                        <h4 class="footer_col_title">Contact Us</h4>
+                        <ul class="footer_contact_list">
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </span>
+                                <div>
+                                    <a href="tel:+919980189914" class="footer_contact_primary">+91 0000000000</a>
+                                    <span class="footer_contact_sub">Mon–Sun, 10:00 AM – 6:00 PM</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </span>
+                                <div>
+                                    <a href="mailto:info@BUYPROPERTZ.in" class="footer_contact_primary">info@BUYPROPERTZ.in</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </span>
+                                <div>
+                                    <span class="footer_contact_sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper cursus efficitur. Sed egestas ornare sapien tempor suscipit. Pellentesque commodo arcu id turpis ullamcorper,</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                </span>
+                                <div>
+                                    <span class="footer_contact_sub">Mon–Fri: 10:00 AM – 6:00 PM<br>Sat–Sun: 10:00 AM – 6:00 PM</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom bar -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="footer_bottom_inner">
+                    <p class="footer_copy">© 2026 BUYPROPERTZ., All rights reserved.</p>
+                    <div class="footer_legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
