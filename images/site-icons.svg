@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 24 24" fill="none" id="notification_icon">
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol viewBox="0 0 14 14" id="user_icon">
+        <path d="M7 0C7.92826 0 8.8185 0.368749 9.47487 1.02513C10.1313 1.6815 10.5 2.57174 10.5 3.5C10.5 4.42826 10.1313 5.3185 9.47487 5.97487C8.8185 6.63125 7.92826 7 7 7C6.07174 7 5.1815 6.63125 4.52513 5.97487C3.86875 5.3185 3.5 4.42826 3.5 3.5C3.5 2.57174 3.86875 1.6815 4.52513 1.02513C5.1815 0.368749 6.07174 0 7 0ZM7 14C7 14 14 14 14 12.25C14 10.15 10.5875 7.875 7 7.875C3.4125 7.875 0 10.15 0 12.25C0 14 7 14 7 14Z"></path>
+    </symbol>
+    <symbol viewBox="0 0 24 14" id="menu_icon">
+        <path d="M5.08155 1H18.6867M1 7H22.7683H5.08155M5.08155 13H18.6867" stroke-width="1.78125" stroke-linecap="round" stroke-linejoin="round"></path>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="arrow_icon" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="check_icon">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="location_icon" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+    </symbol>
+</div>
