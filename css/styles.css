@@ -1819,9 +1819,9 @@ a.contact_info_primary:hover {
     width: calc(100% - 400px);
 }
 
-/* ── Enquiry Card ── */
+/* ── Enquiry Card (Form) ── */
 .proj_enquiry_card {
-    background: #faf9f7;
+    background: #fff;
     border: 1px solid #ece9e2;
     border-radius: 16px;
     padding: 28px 24px 24px;
@@ -1829,95 +1829,116 @@ a.contact_info_primary:hover {
     flex-direction: column;
 }
 
-.proj_price_label {
+.proj_enquiry_eyebrow {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #8a8f9e;
-    margin: 0 0 6px;
+    color: #f6901e;
+    margin: 0 0 8px;
 }
 
-.proj_price {
-    font-size: 28px;
-    font-weight: 800;
+.proj_enquiry_title {
+    font-size: 22px;
+    font-weight: 700;
     color: #1a2340;
-    margin: 0 0 14px;
-    line-height: 1.15;
+    line-height: 1.25;
+    margin: 0 0 22px;
 }
 
-.proj_possession {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 14px;
-    color: #8a8f9e;
-    margin: 0 0 24px;
-}
-
-.proj_possession svg {
-    flex-shrink: 0;
-    color: #8a8f9e;
-}
-
-.proj_enquiry_actions {
+/* Form layout */
+.proj_enquiry_form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 14px;
 }
 
-.proj_btn {
+.proj_form_group {
     width: 100%;
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: opacity 0.2s, box-shadow 0.2s, background 0.2s;
-    font-family: inherit;
 }
 
-.proj_btn_primary {
-    background: #f6901e;
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(200, 155, 60, 0.35);
-}
-
-.proj_btn_primary:hover {
-    opacity: 0.9;
-    box-shadow: 0 6px 18px rgba(200, 155, 60, 0.45);
-}
-
-.proj_btn_outline {
+.proj_form_input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #dde2ec;
+    border-radius: 10px;
+    font-size: 14.5px;
+    color: #1a2340;
     background: #fff;
-    color: #1a2340;
-    border: 1.5px solid #1a2340;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+    resize: none;
+    display: block;
 }
 
-.proj_btn_outline:hover {
-    background: #f4f5f8;
+.proj_form_input::placeholder {
+    color: #a8afc4;
 }
 
-.proj_btn_ghost {
-    background: #f0ede8;
-    color: #1a2340;
+.proj_form_input:focus {
+    border-color: #1a2340;
 }
 
-.proj_btn_ghost:hover {
-    background: #e8e4dd;
+.proj_form_textarea {
+    min-height: 100px;
+    line-height: 1.5;
 }
 
-.proj_enquiry_hint {
+.proj_form_submit {
+    width: 100%;
+    padding: 16px 20px;
+    background: #1a2340;
+    color: #fff;
+    font-size: 15.5px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, opacity 0.2s;
+    margin-top: 4px;
+}
+
+.proj_form_submit:hover {
+    background: #243060;
+}
+
+.proj_form_hint {
     text-align: center;
     font-size: 12.5px;
     color: #a0a5b4;
     margin: 0;
+}
+
+/* ── Call Strip ── */
+.proj_call_strip {
+    background: #1a2340;
+    border-radius: 14px;
+    padding: 22px 20px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.proj_call_label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 10px;
+}
+
+.proj_call_number {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f6901e;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.proj_call_number:hover {
+    opacity: 0.85;
 }
 
 /* ── Project Carousel ── */
