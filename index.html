@@ -70,7 +70,16 @@
     <main>
         <section class="home_banner">
             <div class="banner_image">
-                <img src="images/banner-web.jpeg" alt="Buy Homes Directly With Builders">
+                <picture>
+                    <!-- Mobile Banner -->
+                    <source
+                        media="(max-width: 767px)"
+                        srcset="images/banner-mob.png">
+
+                    <!-- Desktop Banner -->
+                    <img src="images/banner-web.jpeg"
+                        alt="Residential Building Banner">
+                </picture>
             </div>
             <div class="search_properties">
                 <div class="tab">
