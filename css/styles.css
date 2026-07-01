@@ -1333,7 +1333,7 @@ body.menu-open {
     }
 
     .search_properties {
-        transform: translate(-50%, 60%);
+        transform: translate(-50%, -40%);
     }
 
     .search_properties .tabcontent {
@@ -2745,5 +2745,8 @@ a.contact_info_primary:hover {
 @media (width <=768px) {
 .city_hero{
     padding: 3rem 1rem;
+}
+.home_banner .banner_image img {
+    aspect-ratio: 9/16;
 }
 }
