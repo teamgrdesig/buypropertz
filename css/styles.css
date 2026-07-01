@@ -1116,14 +1116,13 @@ body.menu-open {
 
 .home_banner .banner_image {
     width: 100%;
-    line-height: 0;
+    overflow: hidden;
 }
 
 .home_banner .banner_image img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
 }
 
 
@@ -2745,8 +2744,5 @@ a.contact_info_primary:hover {
 @media (width <=768px) {
 .city_hero{
     padding: 3rem 1rem;
-}
-.home_banner .banner_image img {
-    aspect-ratio: 9/16;
 }
 }
