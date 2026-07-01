@@ -1112,70 +1112,18 @@ body.menu-open {
 /* ── Home Banner Section ─────────────────────────────────── */
 .home_banner {
     position: relative;
-    background-image: url(../images/home-banner-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 500px;
-    padding: 20px 0;
 }
 
-.home_banner .banner_title {
-    max-width: 1280px;
-    width: 85%;
-    margin: 0 auto;
-    padding: 0 15px;
+.home_banner .banner_image {
+    width: 100%;
+    line-height: 0;
 }
 
-.home_banner .banner_title .title_wrap {
-    padding-bottom: 50px;
-}
-
-.home_banner .banner_title .title_wrap .h1 {
-    padding: 15px 0;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: normal;
-}
-
-/* ── Trust badges pill ── */
-.home_banner .banner_title .hb_trust_badges {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.25rem;
-    background: #dee3e9;
-    border-radius: 50px;
-    padding: 0.65rem 1.75rem;
-}
-
-.home_banner .banner_title .hb_badge {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #1a6b3c;
-    white-space: nowrap;
-}
-
-.home_banner .banner_title .hb_badge img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    flex-shrink: 0;
+.home_banner .banner_image img {
+    width: 100%;
+    height: auto;
     display: block;
-}
-
-.home_banner .banner_title .hb_badge_divider {
-    width: 1.5px;
-    height: 32px;
-    background: #9dbfad;
-    flex-shrink: 0;
-}
-
-.home_banner .hb_creative_image {
-    position: absolute;
-    bottom: -35px;
-    right: 10%;
+    object-fit: cover;
 }
 
 
@@ -1187,7 +1135,7 @@ body.menu-open {
     padding: 0 15px;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 65%);
+    transform: translate(-50%, -55%);
 }
 
 .search_properties .tab {
@@ -1380,47 +1328,8 @@ body.menu-open {
         max-width: 112px;
     }
 
-    .home_banner {
-        min-height: 450px;
-    }
-
-    .home_banner .banner_title,
     .search_properties {
         width: 100%;
-    }
-
-    .home_banner .banner_title .hb_trust_badges {
-        gap: 0.62rem;
-        padding: 0.65rem 1rem;
-    }
-
-    .home_banner .banner_title .title_wrap {
-        padding-bottom: 20px;
-    }
-
-    .home_banner .banner_title .title_wrap .h1 {
-        font-size: 32px;
-        text-align: center;
-    }
-
-    .home_banner .banner_title .hb_badge img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .home_banner .banner_title .hb_badge {
-        font-size: 0.875rem;
-        font-weight: 600;
-    }
-
-    .home_banner .hb_creative_image {
-        right: 0;
-        bottom: 50px;
-    }
-
-    .home_banner .hb_creative_image img {
-        aspect-ratio: 16/9;
-        height: auto;
     }
 
     .search_properties {
