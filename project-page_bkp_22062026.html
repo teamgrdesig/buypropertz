@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUYPROPERTZ Cities</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-wrap">
+                <a href="#">
+                    <img width="180" height="40" src="images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="rightNavbar">
+                <button class="wishlist" aria-label="Wishlist">
+                    <svg width="22" height="22"><use href="images/site-icons.svg#notification_icon"></use></svg>
+                    <span class="wishlist-badge">0</span>
+                </button>
+                <div class="login_Wrap">
+                    <button class="signin-btn" aria-label="Sign in">
+                        Sign in
+                        <svg width="16" height="16"><use href="images/site-icons.svg#user_icon"></use></svg>
+                    </button>
+                </div>
+                <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sideMenu">
+                    <svg width="24" height="14"><use href="images/site-icons.svg#menu_icon"></use></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side menu overlay -->
+    <div class="sidemenu_overlay" id="sideMenuOverlay" aria-hidden="true"></div>
+
+    <!-- Side menu drawer -->
+    <aside class="sidemenu" id="sideMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <!-- Drawer header -->
+        <div class="sidemenu_header">
+            <a href="#" class="sidemenu_logo">
+                <img src="images/logo.png" width="160" height="36" alt="BUYPROPERTZ">
+            </a>
+            <button class="sidemenu_close" id="sideMenuClose" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <!-- Nav links -->
+        <nav class="sidemenu_nav" aria-label="Side navigation">
+            <ul class="sidemenu_links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Upcoming Projects</a></li>
+                <li><a href="#">Ongoing Projects</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section class="project_section">
+            <a class="backLink" href="/ongoing-projects">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                Back to Ongoing Projects
+            </a>
+
+            <div class="project_grid">
+
+                <!-- ── Left: Image Carousel ── -->
+                <div class="project_grid_left">
+                    <div class="proj_carousel">
+                        <div class="swiper mySwiper2">
+                            <!-- Badges -->
+                            <div class="proj_carousel_badges">
+                                <span class="badge badge_status">Under Construction</span>
+                                <span class="badge badge_featured">Featured</span>
+                            </div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/o2hpcusid1x8itjdrabv.webp" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/bo5ggfwwou6hvvf1o5rh.webp" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/a6ftlum1q3qjfzloxa9m.webp" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/lqhzvwatsopjqayd0jmv.webp" />
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div thumbsSlider="" class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/o2hpcusid1x8itjdrabv.webp" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/bo5ggfwwou6hvvf1o5rh.webp" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/a6ftlum1q3qjfzloxa9m.webp" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/lqhzvwatsopjqayd0jmv.webp" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── Project Details Card ── -->
+                    <div class="proj_details_card">
+                        <h1 class="proj_details_title">Birla Trimaya Phase 4</h1>
+                        <p class="proj_details_address">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Shettigere Main Road, Before KIAL, Devanahalli, North Bangalore, bangalore
+                        </p>
+
+                        <div class="proj_details_specs">
+                            <div class="proj_spec_item">
+                                <span class="proj_spec_label">TYPE</span>
+                                <span class="proj_spec_value">Apartment</span>
+                            </div>
+                            <div class="proj_spec_item">
+                                <span class="proj_spec_label">CONFIGURATION</span>
+                                <span class="proj_spec_value">1BHK</span>
+                            </div>
+                            <div class="proj_spec_item">
+                                <span class="proj_spec_label">AREA</span>
+                                <span class="proj_spec_value">824 – 4000 sq.ft</span>
+                            </div>
+                            <div class="proj_spec_item">
+                                <span class="proj_spec_label">POSSESSION</span>
+                                <span class="proj_spec_value">Dec 2031</span>
+                            </div>
+                        </div>
+
+                        <div class="proj_details_description">
+                            <h3 class="proj_desc_heading">Description</h3>
+                            <p class="proj_desc_text">Birla Trimaya Phase 4 is the latest phase of the iconic 52-acre smart township by Birla Estates in Devanahalli, just 2 km from Kempegowda International Airport. Phase 4 offers 548 villa-style duplex apartments across 7 towers (G+14), featuring 1, 2, 3 &amp; 4 BHK homes with private terraces. The township boasts 35+ acres of green open space, a 2.5-acre lake, 45,000 sq.ft clubhouse, and Vaastu-compliant designs.</p>
+                        </div>
+                    </div>
+
+                    <!-- ── Project Location Card ── -->
+                    <div class="proj_location_card">
+                        <h3 class="proj_location_title">Project Location</h3>
+                        <p class="proj_location_address">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Shettigere Main Road, Before KIAL, Devanahalli, North Bangalore
+                        </p>
+                        <div class="proj_map_wrap">
+                            <iframe
+                                title="Birla Trimaya Phase 4 Location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.41647215431!2d77.6658625748453!3d13.18606248714938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1d000b85990d%3A0x3f31b47f134daf6d!2sTrimaya%20Phase%204%20Birla%20Estate!5e1!3m2!1sen!2sin!4v1773140599530!5m2!1sen!2sin"
+                                width="100%"
+                                height="380"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- ── Amenities Card ── -->
+                    <div class="proj_amenities_card">
+                        <h3 class="proj_amenities_title">Amenities</h3>
+                        <ul class="proj_amenities_list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                45,000 sq.ft Grand Clubhouse
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                2.5-Acre Lake with Walk-over Bridge
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Swimming Pool &amp; Kids Pool
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Gymnasium
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Jogging Track
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Cricket Arena
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Indoor Sports &amp; Games
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Amphitheater
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Fragrance Garden
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Children's Play Area
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                Convenience Retail within Township
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                EV Charging Stations
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6901e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                24/7 Security &amp; CCTV
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- ── Right: Enquiry Card ── -->
+                <div class="project_grid_right">
+                    <div class="proj_enquiry_card">
+                        <p class="proj_price_label">Starting From</p>
+                        <h2 class="proj_price">&#8377;90 Lakh &#8211; &#8377;4.3 Cr</h2>
+                        <p class="proj_possession">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Possession: Dec 2031
+                        </p>
+                        <div class="proj_enquiry_actions">
+                            <button class="proj_btn proj_btn_primary">Enquire Now</button>
+                            <button class="proj_btn proj_btn_outline">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                Schedule Site Visit
+                            </button>
+                            <button class="proj_btn proj_btn_ghost">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                Request Callback
+                            </button>
+                        </div>
+                        <p class="proj_enquiry_hint">For instant enquiry press Enquire Now</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site_footer">
+        <div class="footer_main">
+            <div class="container">
+                <div class="footer_grid">
+
+                    <!-- Col 1 — Brand -->
+                    <div class="footer_brand">
+                        <a href="#" class="footer_logo">
+                            <img src="images/logo.png" width="160" height="36" alt="BUYPROPERTZ">
+                        </a>
+                        <p class="footer_tagline">Your Trusted Real Estate Partner</p>
+                        <p class="footer_about">Leading channel partner in Bangalore's real estate market. We connect you with the best properties and developers, ensuring a smooth and transparent buying experience.</p>
+                        <div class="footer_stats">
+                            <div class="footer_stat">
+                                <strong>1000+</strong>
+                                <span>Properties Sold</span>
+                            </div>
+                            <div class="footer_stat">
+                                <strong>17+</strong>
+                                <span>Years Experience</span>
+                            </div>
+                            <div class="footer_stat">
+                                <strong>2000+</strong>
+                                <span>Happy Clients</span>
+                            </div>
+                        </div>
+                        <div class="footer_socials">
+                            <a href="#" aria-label="Facebook" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" aria-label="YouTube" class="footer_social_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Col 2 — Quick Links -->
+                    <div class="footer_col">
+                        <h4 class="footer_col_title">Quick Links</h4>
+                        <ul class="footer_links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Upcoming Projects</a></li>
+                            <li><a href="#">Ongoing Projects</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3 — Our Services -->
+                    <div class="footer_col">
+                        <h4 class="footer_col_title">Our Services</h4>
+                        <ul class="footer_links">
+                            <li><a href="#">Property Consultation</a></li>
+                            <li><a href="#">Site Visits</a></li>
+                            <li><a href="#">Documentation Support</a></li>
+                            <li><a href="#">Investment Advisory</a></li>
+                            <li><a href="#">After-Sales Service</a></li>
+                            <li><a href="#">Home Loan Assistance</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4 — Contact Us -->
+                    <div class="footer_col">
+                        <h4 class="footer_col_title">Contact Us</h4>
+                        <ul class="footer_contact_list">
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </span>
+                                <div>
+                                    <a href="tel:+919980189914" class="footer_contact_primary">+91 0000000000</a>
+                                    <span class="footer_contact_sub">Mon–Sun, 10:00 AM – 6:00 PM</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </span>
+                                <div>
+                                    <a href="mailto:info@BUYPROPERTZ.in" class="footer_contact_primary">info@BUYPROPERTZ.in</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </span>
+                                <div>
+                                    <span class="footer_contact_sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper cursus efficitur. Sed egestas ornare sapien tempor suscipit. Pellentesque commodo arcu id turpis ullamcorper,</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="footer_contact_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                </span>
+                                <div>
+                                    <span class="footer_contact_sub">Mon–Fri: 10:00 AM – 6:00 PM<br>Sat–Sun: 10:00 AM – 6:00 PM</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom bar -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="footer_bottom_inner">
+                    <p class="footer_copy">© 2026 BUYPROPERTZ., All rights reserved.</p>
+                    <div class="footer_legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
